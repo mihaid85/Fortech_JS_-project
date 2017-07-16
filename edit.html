@@ -4,26 +4,28 @@
 		<title>Edit Issue</title>
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	</head>
 	<body>
-		<h4>Edit Issue:</h4>
-		<span>Type:</span>
-		<select id="issue_type">
-			<option>Feature</option>
-			<option>Bug</option>
-			<option>Task</option>
-		</select>
-		<span>Name:</span>
-		<input id="issue_name" type="text" name="name" value="">
-		<span>Assignee:</span>
-		<select id="issue_assignee"></select>
-		<span>Description:</span>
-		<textarea id="issue_description" name="issue_description"></textarea>
-		<span>Status:</span>
-		<select id="issue_status"></select>
-		<input type="button" value="Submit" onclick="updateIssue(issue_id, type, name, 
-			assignee, description, status)">
-
+		<div class="container">
+			<h4>Edit Issue:</h4>
+			<span>Type:</span>
+			<select id="issue_type">
+				<option>Feature</option>
+				<option>Bug</option>
+				<option>Task</option>
+			</select>
+			<span>Name:</span>
+			<input id="issue_name" type="text" name="name" value="">
+			<span>Assignee:</span>
+			<select id="issue_assignee"></select>
+			<span>Description:</span>
+			<textarea id="issue_description" name="issue_description"></textarea>
+			<span>Status:</span>
+			<select id="issue_status"></select>
+			<input type="button" value="Submit" onclick="updateIssue(issue_id, type, name, 
+				assignee, description, status)">
+		</div>
 		<script type="text/javascript" src="js/issues.js"></script>
 		<script type="text/javascript" src="js/user.js"></script>
 		<script type="text/javascript">

@@ -1,0 +1,7 @@
+.container{
+	margin-top: 20px;
+}
+#issues_table{
+	border-collapse: separate;
+	border-spacing: 15px 0;
+}
