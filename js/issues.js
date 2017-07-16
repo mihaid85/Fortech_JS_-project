@@ -81,6 +81,9 @@ function addIssue () {
 	var created_by = username;
 	var assignee = document.getElementById("issue_assignee").value;
 	var description = document.getElementById("issue_description").value;
+	if (name === "" || description === "") {
+		alert("All fields must be filled out");
+	}
 	
 	var issue = new Issue(type, name, sprint, created_by, assignee, description);
 	

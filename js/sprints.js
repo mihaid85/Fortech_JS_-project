@@ -16,6 +16,9 @@ function Sprint (name) {
 
 function addSprint () {
 	var sprint_name = document.getElementById("sprint_name").value;
+	if (sprint_name == "") {
+		alert("Name must be filled out");
+	}
 	var sprint = new Sprint(sprint_name);
 	if (typeof(Storage) !== "undefined") {
 		if (localStorage.getItem('sprints') != null) {

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Home</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<h3 id="welcome">Welcome </h3>
+
+		<span>Add Sprint:</span>
+		<input id="sprint_name" type="text" name="sprint_name" value="">
+		<input type="button" value="Submit" onclick="addSprint()">
+
+		<a href="sprint-list.html">Sprint List</a>
+		<span id="sprint_error"></span>
+		<br>
+
+		<h4>Add Issue:</h4>
+		<span>Type:</span>
+		<select id="issue_type">
+			<option>Feature</option>
+			<option>Bug</option>
+			<option>Task</option>
+		</select>
+		<span>Name:</span>
+		<input id="issue_name" type="text" name="name" value="">
+		<span>Subtask of:</span>
+		<select id="subtask" disabled></select>
+		<span>Sprint:</span>
+		<select id="issue_sprint"></select>
+		<span>Assignee:</span>
+		<select id="issue_assignee"></select>
+		<span>Description:</span>
+		<textarea id="issue_description" name="issue_description"></textarea>
+		<input type="button" value="Submit" onclick="addIssue()">
+		<a href="issue-list.html">Issue List</a>
+		<br>
+
+		<span>Add Comment:</span>
+		<textarea id="comment_name" name="comment_name"></textarea>
+		<input type="button" value="Submit" onclick="addComment()">
+		<ul id="comments"></ul>
+
+		<script type="text/javascript" src="js/user.js"></script>
+		<script type="text/javascript" src="js/issues.js"></script>
+		<script type="text/javascript" src="js/project.js"></script>
+		<script type="text/javascript" src="js/sprints.js"></script>
+		<script type="text/javascript" src="js/comments.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+		<script type="text/javascript">
+			getSprintOptions();
+			getSubtasksOptions();
+			getUserOptions();
+		</script>
+
+	</body>
+</html>
