@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Edit Issue</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<h4>Edit Issue:</h4>
+		<span>Type:</span>
+		<select id="issue_type">
+			<option>Feature</option>
+			<option>Bug</option>
+			<option>Task</option>
+		</select>
+		<span>Name:</span>
+		<input id="issue_name" type="text" name="name" value="">
+		<span>Assignee:</span>
+		<select id="issue_assignee"></select>
+		<span>Description:</span>
+		<textarea id="issue_description" name="issue_description"></textarea>
+		<span>Status:</span>
+		<select id="issue_status"></select>
+		<input type="button" value="Submit" onclick="updateIssue(issue_id, type, name, 
+			assignee, description, status)">
+
+		<script type="text/javascript" src="js/issues.js"></script>
+		<script type="text/javascript" src="js/user.js"></script>
+		<script type="text/javascript">
+			
+		var urlParams = new URLSearchParams(window.location.search);
+		var issue_id = urlParams.get('issue_id');
+		var issue = JSON.parse(localStorage.getItem('issues'));
+
+		var type = issue[issue_id].type;
+		var name = issue[issue_id].name;
+		var assignee = issue[issue_id].assignee;
+		var description = issue[issue_id].description;
+		var status = issue[issue_id].status;
+
+		document.getElementById("issue_type").value = type;
+		document.getElementById("issue_name").value = name;
+		document.getElementById("issue_assignee").value = assignee;
+		document.getElementById("issue_description").value = description;
+		getStatusOptions();
+		getUserOptions();
+		</script>
+	</body>
+</html>

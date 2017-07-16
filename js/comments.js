@@ -1,4 +1,3 @@
-//Comment
 getCommentsFromStorage();
 if (localStorage.getItem('comment_id') === null) {
 	localStorage.setItem('comment_id', 1)

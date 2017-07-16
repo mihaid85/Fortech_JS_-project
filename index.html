@@ -1,58 +1,21 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Danet Mihai</title>
+		<title>Login</title>
 		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	    <meta name="description" content="Demo project">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
 		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
-		
+
 	</head>
 	<body>
-		<span>User:</span>
-		<input id="user_name" type="text" name="user_name" value="">
-		<input type="button" value="Submit" onclick="addUser()">
-		<ul id="users"></ul>
-
-		<span>Sprint:</span>
-		<input id="sprint_name" type="text" name="sprint_name" value="">
-		<input type="button" value="Submit" onclick="addSprint()">
-		<ul id="sprints"></ul>
-
-		<h4>Add Issue:</h4>
-		<span>Type:</span>
-		<select id="issue_type" name="issue_type">
-			<option>Feature</option>
-			<option>Bug</option>
-			<option>Task</option>
+		<span>Login User:</span>
+		<select id="issue_user">
+			<option value="1">Mihai</option>
+			<option value="2">Dan</option>
+			<option value="2">Andrei</option>
 		</select>
-		<span>Name:</span>
-		<input id="issue_name" type="text" name="name" value="">
-		<span>Sprint:</span>
-		<select id="issue_sprint"></select>
-		<span>Created by:</span>
-		<select id="issue_user"></select>
-		<span>Assignee:</span>
-		<select id="issue_assignee"></select>
-		<span>Description:</span>
-		<textarea id="issue_description" name="issue_description"></textarea>
-		<span>Status:</span>
-		<select id="status"></select><!-- select options from js statuses array -->
-
-		<span>Comment:</span>
-		<textarea id="comment_name" name="comment_name"></textarea>
-		<input type="button" value="Submit" onclick="addComment()">
-		<ul id="comments"></ul>
-
-		<script type="text/javascript" src="users.js"></script>
-		<script type="text/javascript" src="issues.js"></script>
-		<script type="text/javascript" src="project.js"></script>
-		<script type="text/javascript" src="sprints.js"></script>
-		<script type="text/javascript" src="comments.js"></script>
-		<script type="text/javascript" src="script.js"></script>
-
+		<input type="button" value="Submit" onclick="login();">
+		
+		<script type="text/javascript" src="js/login.js"></script>
+		
 	</body>
 </html>

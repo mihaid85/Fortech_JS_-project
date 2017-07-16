@@ -1,5 +1,5 @@
 //Sprint
-getSprintsFromStorage();
+// getSprintsFromStorage();
 if (localStorage.getItem('sprint_id') === null) {
 	localStorage.setItem('sprint_id', 1)
 	var sprint_id = 1;
